@@ -1,0 +1,3 @@
+rootProject.name = 'CrimeEvader'
+
+include ':app'
