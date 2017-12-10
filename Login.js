@@ -43,7 +43,6 @@ export default class Login extends Component<{}> {
     .then((response) => (responseData = response.text()))
     .then((responseData) => {
       this.setState({loggedIn:true});
-      Alert.alert(responseData);
       if (responseData == 'Success') {
         navigate('Map');
       } else {
@@ -57,7 +56,7 @@ export default class Login extends Component<{}> {
     return (
       <BackgroundImage>
         <Text style={styles.nameTitle}>Name</Text>
-        <TextInput style={styles.name} autoCapitalize="none" laceholder="Username" onChangeText={(text) => this.setState({username: text})}/>
+        <TextInput style={styles.name} autoCapitalize="none" placeholder="Username" onChangeText={(text) => this.setState({username: text})}/>
         <Text style={styles.passwordTitle}>Password</Text>
         <TextInput style={styles.password} secureTextEntry={true} placeholder="Password" onChangeText={(text) => this.setState({password: text})}/>
         <TouchableOpacity
@@ -93,22 +92,6 @@ class BackgroundImage extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
   name: {
     fontSize: 15,
     left: 63,
