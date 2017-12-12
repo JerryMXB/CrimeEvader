@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 
-const signUpUrl = 'http://192.168.1.163:8080';
+const signUpUrl = 'http://34.201.113.162:8080';
 
 export default class SignUp extends Component<{}> {
   static navigationOptions = { title: 'Welcome', header: null };

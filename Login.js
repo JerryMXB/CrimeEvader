@@ -14,7 +14,7 @@ import {
 
 
 // Login component
-const loginUrl = 'http://192.168.1.163:8080';
+const loginUrl = 'http://34.201.113.162:8080';
 
 export default class Login extends Component<{}> {
   static navigationOptions = { title: 'Welcome', header: null };
