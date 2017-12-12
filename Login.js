@@ -14,7 +14,7 @@ import {
 
 
 // Login component
-const loginUrl = 'http://localhost:8080';
+const loginUrl = 'http://192.168.1.163:8080';
 
 export default class Login extends Component<{}> {
   static navigationOptions = { title: 'Welcome', header: null };
@@ -35,6 +35,7 @@ export default class Login extends Component<{}> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        type:'login',
         username: this.state.username,
         password: this.state.password,
     })}

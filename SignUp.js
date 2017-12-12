@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 
-const signUpUrl = 'http://localhost:8080';
+const signUpUrl = 'http://192.168.1.163:8080';
 
 export default class SignUp extends Component<{}> {
   static navigationOptions = { title: 'Welcome', header: null };
@@ -28,6 +28,7 @@ export default class SignUp extends Component<{}> {
       }};
 
   _signUp() {
+    const { navigate } = this.props.navigation;
     var myInit = {
       method: 'POST',
       headers: {
@@ -35,6 +36,7 @@ export default class SignUp extends Component<{}> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        type:'signup',
         username: this.state.username,
         email: this.state.email,
         password: this.state.password,
@@ -52,7 +54,6 @@ export default class SignUp extends Component<{}> {
       }
     }).done();
   };
-  }
 
   render() {
     const { navigate } = this.props.navigation;
@@ -87,7 +88,7 @@ export default class SignUp extends Component<{}> {
   }
   }
 
-// Background Image component
+  // Background Image component
 class BackgroundImage extends Component {
   render() {
     return (
@@ -98,7 +99,6 @@ class BackgroundImage extends Component {
   }
 }
 
-// Styles
 const styles = StyleSheet.create({
   nameTitle: {
     fontSize: 12,
