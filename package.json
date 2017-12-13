@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "react": "16.0.0",
-    "react-native": "0.51.0",
+    "react-native": "^0.51.0",
+    "react-native-maps": "^0.18.3",
+    "react-native-maps-google": "^1.1.4",
+    "react-native-vector-icons": "^4.0.1",
     "react-navigation": "^1.0.0-beta.21"
   },
   "devDependencies": {
